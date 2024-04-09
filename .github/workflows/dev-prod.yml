@@ -1,5 +1,5 @@
 
-name: Build and deploy 
+name: Build and deploy on Dev and Prod
 
 on:
   
