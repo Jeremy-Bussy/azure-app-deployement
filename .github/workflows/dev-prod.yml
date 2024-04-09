@@ -39,7 +39,7 @@ jobs:
           name: java-app
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+        id: deploy-to-webapp-dev
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'App1azerty'
@@ -61,7 +61,7 @@ jobs:
           name: java-app
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+        id: deploy-to-webapp-drop
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'App2azerty'
