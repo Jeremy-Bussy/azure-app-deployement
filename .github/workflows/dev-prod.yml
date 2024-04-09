@@ -44,12 +44,12 @@ jobs:
         with:
           app-name: 'App1azerty'
           slot-name: 'Developpement'
-          publish-profile: ${{ secrets.public }}
+          publish-profile: ${{ secrets.app1 }}
           package: '*.jar'
 
   prod:
     runs-on: windows-latest
-    needs: dev
+    needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -66,5 +66,5 @@ jobs:
         with:
           app-name: 'App2azerty'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.public }}
+          publish-profile: ${{ secrets.app2 }}
           package: '*.jar'
