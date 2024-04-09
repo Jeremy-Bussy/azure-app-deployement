@@ -43,7 +43,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'App1azerty'
-          slot-name: 'Developpement'
+          slot-name: 'Production'
           publish-profile: ${{ secrets.app1 }}
           package: '*.jar'
 
